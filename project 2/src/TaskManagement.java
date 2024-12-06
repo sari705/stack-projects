@@ -19,8 +19,9 @@ public class TaskManagement {
     }
 
     public Task RemoveTask(){
-        return s.pop();
-
+        if (!s.isEmpty())
+            return s.pop();
+        else return null;
     }
 
 
