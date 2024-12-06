@@ -9,6 +9,10 @@ public class TaskManagement {
     public void AddTask(Task t){
         int x = t.getCode();
         Stack<Task>temp = new Stack<>();
+        if (s.isEmpty()){
+            s.push(t);
+            return;
+        }
         while (s.stackTop().getCode()>x||!s.isEmpty()){
             temp.push(s.pop());
         }
